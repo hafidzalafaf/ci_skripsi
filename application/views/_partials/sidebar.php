@@ -27,7 +27,7 @@
                with font-awesome or any other icon font library -->
           
           <li class="nav-item">
-            <a href="page-custom/hrd_data.php" class="nav-link">
+            <a href="<?php echo base_url('hrd/Hrd/data_pribadi') ?>" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
               <p>
                 Data Pribadi

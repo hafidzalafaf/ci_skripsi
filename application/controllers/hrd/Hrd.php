@@ -15,5 +15,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $this->load->view('_partials/js');
             $this->load->view('_partials/js_hrd');
         }
+
+        public function data_pribadi(){
+            $this->load->view('_partials/header');
+            $this->load->view('_partials/navbar');
+            $this->load->view('_partials/sidebar');
+            $this->load->view('hrd/data_pribadi');
+            $this->load->view('_partials/footer');
+            $this->load->view('_partials/js');
+        }
     }
 ?>
