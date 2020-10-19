@@ -9,7 +9,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item active"><a href="../index_hrd.php">Home</a></li>
+              <li class="breadcrumb-item active"><a href="<?php echo base_url('hrd/Hrd/index') ?>">Home</a></li>
               <li class="breadcrumb-item">Profil</li>
               <!-- <li class="breadcrumb-item active">Dashboard</li> -->
             </ol>
@@ -19,9 +19,7 @@
     </div>
     <!-- /.content-header -->
 
-    <!-- Main content -->
-    
-    
+    <!-- Main content --> 
     <section class="content">
       <div class="container-fluid">
         <div class="row">
@@ -34,7 +32,7 @@
                 <div class="row">
                   <div class="col-lg-2 d-flex justify-content-center">
                       <img class="profile-img img-fluid img-circle img-lg"
-                         src="dist/img/user4-128x128.jpg"
+                         src="<?php echo base_url('assets/dist/img/user4-128x128.jpg')?>"
                          alt="User profile picture">
                   </div>
                   <div class="col-lg-6">
