@@ -9,7 +9,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="../home_leader.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="<?php echo base_url('leader/Leader') ?>">Home</a></li>
               <li class="breadcrumb-item active">Daily Activity</li>
             </ol>
           </div><!-- /.col -->
@@ -32,8 +32,8 @@
               <div class="card-body" >
                 <table>
                   <tr>
-                    <td class="pr-2"><a href="leader_daily_form.php" class="btn btn-block btn-sm btn-success" style="width: 100px;">New Task</a></td>
-                    <td><a href="leader_daily_report.php" class="btn btn-block btn-sm btn-primary" style="width: 100px;">Report</a></td>
+                    <td class="pr-2"><a href="<?php echo base_url('leader/Leader/daily_form') ?>" class="btn btn-block btn-sm btn-success" style="width: 100px;">New Task</a></td>
+                    <td><a href="<?php echo base_url('leader/Leader/daily_report') ?>" class="btn btn-block btn-sm btn-primary" style="width: 100px;">Report</a></td>
                   </tr>
                 </table>
                <br>
@@ -63,45 +63,12 @@
                         <td align="center"><span class="badge badge-danger">Pending</span></td>
                         <td align="center">
                           <div class="btn-group">
-                          <a href="leader_daily_update.php" class="btn btn-warning btn-sm"><i class="fas fa-edit" style="color:white;"></i></a>
+                          <a href="<?php echo base_url('leader/Leader/daily_update') ?>" class="btn btn-warning btn-sm"><i class="fas fa-edit" style="color:white;"></i></a>
                           <a href="" onclick="return confirm('Yakin menghapus data ?')" class="btn btn-danger btn-sm" ><i class="fas fa-trash"></i></a>
                           </div>
                         </td>
                       </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>Membuat laporan penjualan bulan Oktober</td>
-                        <td align="center"><span class="badge badge-success">Selesai</span></td>
-                        <td>Laporan belum dimintakan tanda tangan</td>
-                        <td>
-                          Tugas yang anda lakukan sudah sesuai
-                          <br><p class="text-sm text-muted">Norhadi.</p>
-                        </td>
-                        <td align="center"><span class="badge badge-success">Approve</span></td>
-                        <td align="center">
-                          <div class="btn-group">
-                          <a href="leader_daily_update.php" class="btn btn-warning btn-sm"><i class="fas fa-edit" style="color:white;"></i></a>
-                          <a href="" onclick="return confirm('Yakin menghapus data ?')" class="btn btn-danger btn-sm" ><i class="fas fa-trash"></i></a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>Membuat laporan penjualan bulan Oktober</td>
-                        <td align="center"><span class="badge badge-danger">Belum</span></td>
-                        <td>Laporan belum dimintakan tanda tangan</td>
-                        <td>
-                          Minta data permintaan
-                          <br><p class="text-sm text-muted">Hafidz AA.</p>
-                        </td>
-                        <td align="center"><span class="badge badge-danger">Pending</span></td>
-                        <td align="center">
-                          <div class="btn-group">
-                          <a href="leader_daily_update.php" class="btn btn-warning btn-sm"><i class="fas fa-edit" style="color:white;"></i></a>
-                          <a href="" onclick="return confirm('Yakin menghapus data ?')" class="btn btn-danger btn-sm" ><i class="fas fa-trash"></i></a>
-                          </div>
-                        </td>
-                      </tr>
+                      
                     <tbody>
                     </tbody>
                   </table>

@@ -9,8 +9,8 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="../home_leader.html">Home</a></li>
-              <li class="breadcrumb-item"><a href="leader_daily.php">Daily Activity</a></li>
+              <li class="breadcrumb-item"><a href="<?php echo base_url('leader/Leader') ?>">Home</a></li>
+              <li class="breadcrumb-item"><a href="<?php echo base_url('leader/Leader/daily') ?>">Daily Activity</a></li>
               <li class="breadcrumb-item active">Form</li>
             </ol>
           </div><!-- /.col -->
@@ -30,7 +30,7 @@
                 <h3 class="card-title">Form Daily Activity</h3>
               </div>
               <!-- /.card-header -->
-              <form role="form">
+              <form role="form" action="<?php echo base_url('leader/Leader/daily') ?>">
                 <div class="card-body">
                   <div class="form-group">
                     <input type="text" class="form-control" placeholder="6/10/2020" readonly>
@@ -40,9 +40,8 @@
                   </div>
                 </div>
                 <div class="card-footer">
-                    <a href="leader_daily.php" class="btn btn-primary">Submit</a>
-                    <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
-                     <a href="leader_daily.php" class="btn btn-secondary">Cancel</a>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                     <a href="<?php echo base_url('leader/Leader/daily') ?>" class="btn btn-secondary">Cancel</a>
                 </div>
               </form>
              </div>
