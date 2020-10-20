@@ -9,8 +9,8 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="../home_leader.html">Home</a></li>
-              <li class="breadcrumb-item"><a href="leader_kinerja.php">Kinerja</a></li>
+              <li class="breadcrumb-item"><a href="<?php echo base_url('leader/Leader') ?>">Home</a></li>
+              <li class="breadcrumb-item"><a href="<?php echo base_url('leader/Leader/kinerja') ?>">Kinerja</a></li>
               <li class="breadcrumb-item active">Form</li>
             </ol>
           </div><!-- /.col -->
@@ -141,9 +141,9 @@
                     </div>
                   </div>
                   <div class="card-footer">
-                    <a href="leader_kinerja.php" class="btn btn-primary">Submit</a>
+                    <a href="#" class="btn btn-primary">Submit</a>
                         <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
-                    <a href="leader_kinerja.php" class="btn btn-secondary">Cancel</a>
+                    <a href="<?php echo base_url('leader/Leader/kinerja') ?>" class="btn btn-secondary">Cancel</a>
                   </div>
               </form>
              </div>

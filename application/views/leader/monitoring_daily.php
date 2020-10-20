@@ -9,8 +9,8 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="../home_leader.html">Home</a></li>
-              <li class="breadcrumb-item"><a href="leader_monitoring.php">Monitoring</a></li>
+              <li class="breadcrumb-item"><a href="<?php echo base_url('leader/Leader') ?>">Home</a></li>
+              <li class="breadcrumb-item"><a href="<?php echo base_url('leader/Leader/monitoring') ?>">Monitoring</a></li>
               <li class="breadcrumb-item active">Daily</li>
             </ol>
           </div><!-- /.col -->
@@ -54,7 +54,7 @@
                       <td align="center"><span class="badge badge-danger">Pending</span></td>
                       <td align="center">
                         <div class="btn-group">
-                        <a href="leader_monitoring_update.php" class="btn btn-warning btn-sm"><i class="fas fa-edit" style="color:white;"></i></a>
+                        <a href="<?php echo base_url('leader/Leader/monitoring_update') ?>" class="btn btn-warning btn-sm"><i class="fas fa-edit" style="color:white;"></i></a>
                         </div>
                       </td>
                     </tr>
@@ -67,7 +67,7 @@
                       <td align="center"><span class="badge badge-success">Approve</span></td>
                       <td align="center">
                         <div class="btn-group">
-                        <a href="leader_monitoring_update.php" class="btn btn-warning btn-sm"><i class="fas fa-edit" style="color:white;"></i></a>
+                        <a href="<?php echo base_url('leader/Leader/monitoring_update') ?>" class="btn btn-warning btn-sm"><i class="fas fa-edit" style="color:white;"></i></a>
                         </div>
                       </td>
                     </tr>
@@ -80,7 +80,7 @@
                       <td align="center"><span class="badge badge-danger">Pending</span></td>
                       <td align="center">
                         <div class="btn-group">
-                        <a href="leader_monitoring_update.php" class="btn btn-warning btn-sm"><i class="fas fa-edit" style="color:white;"></i></a>
+                        <a href="<?php echo base_url('leader/Leadermonitoring_update') ?>" class="btn btn-warning btn-sm"><i class="fas fa-edit" style="color:white;"></i></a>
                         </div>
                       </td>
                     </tr>

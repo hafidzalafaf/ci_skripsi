@@ -9,7 +9,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="../home_leader.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="<?php echo base_url('leader/Leader') ?>">Home</a></li>
 <!--               <li class="breadcrumb-item"><a href="leader_monitoring.php">Monitoring</a></li>
               <li class="breadcrumb-item"><a href="leader_monitoring_daily.php">Daily</a></li> -->
               <li class="breadcrumb-item active">Kinerja</li>
@@ -65,7 +65,7 @@
                     </div>
                     <div class="col-lg-4 mb-3">
                       <a href="" class="btn btn-primary">Submit</a>
-                      <a href="leader_kinerja_form.php" class="btn btn-success">Evaluasi</a>
+                      <a href="<?php echo base_url('leader/Leader/kinerja_form') ?>" class="btn btn-success">Evaluasi</a>
                     </div>
                   </div>
                 </form>
@@ -90,7 +90,7 @@
                       <td>Sangat Bagus</td>
                       <td>
                         <div class="btn-group">
-                          <a href="leader_kinerja_update.php" class="btn btn-warning btn-sm"><i class="fas fa-edit" style="color:white;"></i></a>
+                          <a href="<?php echo base_url('leader/Leader/kinerja_update') ?>" class="btn btn-warning btn-sm"><i class="fas fa-edit" style="color:white;"></i></a>
                           </div>
                           <a href="" onclick="return confirm('Yakin menghapus data ?')" class="btn btn-danger btn-sm" ><i class="fas fa-trash"></i></a>
                       </td>

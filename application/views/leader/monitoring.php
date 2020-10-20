@@ -9,7 +9,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="../home_leader.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="<?php echo base_url('leader/Leader') ?>">Home</a></li>
               <li class="breadcrumb-item active">Monitoring</li>
             </ol>
           </div><!-- /.col -->
@@ -43,14 +43,14 @@
                     <tr>
                       <td class="p-2">1</td>
                       <td class="p-2">Hafidz Al Afaf</td>
-                      <td align="center" class="p-2"><a href="leader_monitoring_daily.php" class="btn btn-success btn-sm">Today</a></td>
-                      <td align="center" class="p-2"><a href="leader_monitoring_report.php" class="btn btn-primary btn-sm">Report</a></td>
+                      <td align="center" class="p-2"><a href="<?php echo base_url('leader/Leader/monitoring_daily') ?>" class="btn btn-success btn-sm">Today</a></td>
+                      <td align="center" class="p-2"><a href="<?php echo base_url('leader/Leader/monitoring_report') ?>" class="btn btn-primary btn-sm">Report</a></td>
                     </tr>
                     <tr>
                       <td class="p-2">2</td>
                       <td class="p-2">Bintang Citra Kusumaatmaja</td>
-                      <td align="center" class="p-2"><a href="leader_monitoring_daily.php" class="btn btn-success btn-sm">Today</a></td>
-                      <td align="center" class="p-2"><a href="leader_monitoring_report.php" class="btn btn-primary btn-sm">Report</a></td>
+                      <td align="center" class="p-2"><a href="<?php echo base_url('leader/Leader/monitoring_daily') ?>" class="btn btn-success btn-sm">Today</a></td>
+                      <td align="center" class="p-2"><a href="<?php echo base_url('leader/Leader/monitoring_report') ?>" class="btn btn-primary btn-sm">Report</a></td>
                     </tr>
                   
                   </tbody>
