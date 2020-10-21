@@ -18,7 +18,7 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
-    
+
 
 
     <section class="content">
@@ -32,26 +32,25 @@
               <div class="card-body">
                 <div class="row">
                   <div class="col-lg-2 d-flex justify-content-center">
-                      <img class="profile-img img-fluid img-circle img-lg"
-                         src="<?php echo base_url('assets/dist/img/user4-128x128.jpg') ?>"
-                         alt="User profile picture">
+                    <img class="profile-img img-fluid img-circle img-lg" src="<?php echo base_url('assets/dist/img/user4-128x128.jpg') ?>" alt="User profile picture">
                   </div>
                   <div class="col-lg-6">
-                    <h5 class="profile-username mb-0 mt-4">Norhadi</h5>
-                    <p class="text-muted">Staff Marketing</p>
+                    <h5 class="profile-username mb-0 mt-3">Norhadi</h5>
+                    <p class="text-muted mb-0">Staff Marketing</p>
+                    <p class="text-muted">Office Solo</p>
                   </div>
                   <div class="col-lg-2">
                     <p class="mb-0"><i class="fas fa-phone-alt mr-3" style="color:#007bff;"></i>082324898695<br></p>
-                    <p class="mb-0"><i class="fas fa-envelope mr-3" style="color:#007bff;"></i>082324898695<br></p>
+                    <p class="mb-0"><i class="fas fa-envelope mr-3" style="color:#007bff;"></i>norhadi@gmail.com<br></p>
                   </div>
-                   <div class="col-lg-2">
-                    <p class="mb-0"><i class="fas fa-phone-alt mr-3" style="color:#007bff;"></i>082324898695<br></p>
+                  <div class="col-lg-2">
+                    <p class="mb-0"><i class="fas fa-phone-alt mr-3" style="color:#dc3545;"></i>082324898695<br></p>
                   </div>
                 </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
     </section>
 
     <section class="content">
@@ -61,58 +60,58 @@
             <div class="card">
               <div class="card-body">
                 <div class="row">
-                <!-- kiri utama -->
+                  <!-- kiri utama -->
                   <div class="col-lg-8">
                     <div class="row">
-                        <div class="col-lg-6">
-                          <label class="mb-0">Jenis Kelamin</label>
-                          <p class="text-muted">Laki-Laki</p>
-                          <label class="mb-0">Status Pernikahan</label>
-                          <p class="text-muted">Belum Kawin</p>
-                          <label class="mb-0">Alamat Tinggal</label>
-                          <p class="text-muted">Ds. Sriwedari RT. 2 RW.1 Kecamatan Jaken, Kabupaten Pati, Jawa Tengah, Indonesi</p>
-                        </div>
-                        <div class="col-lg-6">
-                          <label class="mb-0">Tempat, Tanggal Lahir</label>
-                          <p class="text-muted">Pati, 21 Februari 1999</p>
-                          <label class="mb-0">NIK</label>
-                          <p class="text-muted">3338564320001</p>
-                          <label class="mb-0">Alamat KTP</label>
-                          <p class="text-muted">Ds. Sriwedari RT. 2 RW.1 Kecamatan Jaken, Kabupaten Pati, Jawa Tengah, Indonesi</p>
-                        </div>
+                      <div class="col-lg-6">
+                        <label class="mb-0">Jenis Kelamin</label>
+                        <p class="text-muted">Laki-Laki</p>
+                        <label class="mb-0">Status Pernikahan</label>
+                        <p class="text-muted">Belum Kawin</p>
+                        <label class="mb-0">Alamat Tinggal</label>
+                        <p class="text-muted">Ds. Sriwedari RT. 2 RW.1 Kecamatan Jaken, Kabupaten Pati, Jawa Tengah, Indonesi</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <label class="mb-0">Tempat, Tanggal Lahir</label>
+                        <p class="text-muted">Pati, 21 Februari 1999</p>
+                        <label class="mb-0">NIK</label>
+                        <p class="text-muted">3338564320001</p>
+                        <label class="mb-0">Alamat KTP</label>
+                        <p class="text-muted">Ds. Sriwedari RT. 2 RW.1 Kecamatan Jaken, Kabupaten Pati, Jawa Tengah, Indonesi</p>
+                      </div>
                     </div>
                   </div>
                   <!-- kanan utama -->
                   <div class="col-lg-4">
                     <div class="row">
                       <div class="col-lg-6">
-                          <label class="mb-0">NIP</label>
-                          <p class="text-muted">MKT-001-2020</p>
-                          <label class="mb-0">NPWP</label>
-                          <p class="text-muted">9984503445</p>
-                          <label class="mb-0">Status</label>
-                          <p class="text-muted">PKWT</p>
+                        <label class="mb-0">NIP</label>
+                        <p class="text-muted">MKT-001-2020</p>
+                        <label class="mb-0">NPWP</label>
+                        <p class="text-muted">9984503445</p>
+                        <label class="mb-0">Status</label>
+                        <p class="text-muted">PKWT</p>
                       </div>
                       <div class="col-lg-6">
-                          <label class="mb-0">No. Rekening</label>
-                          <p class="text-muted">BNI/44567534</p>
-                          <label class="mb-0">Divisi</label>
-                          <p class="text-muted">Marketing</p>
-                          <label class="mb-0">Perusahaan</label>
-                          <p class="text-muted">PT. Sinar Grafindo</p>
+                        <label class="mb-0">No. Rekening</label>
+                        <p class="text-muted">BNI/44567534</p>
+                        <label class="mb-0">Divisi</label>
+                        <p class="text-muted">Marketing</p>
+                        <label class="mb-0">Perusahaan</label>
+                        <p class="text-muted">PT. Sinar Grafindo</p>
                       </div>
                     </div>
                   </div>
                 </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
     </section>
 
 
 
-    
+
 
 
 

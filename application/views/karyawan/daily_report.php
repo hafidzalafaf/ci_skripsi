@@ -29,8 +29,8 @@
               <div class="card-header">
                 <h5>Monitoring Report Activity</h5>
                 <div class="alert alert-sm alert-success alert-dismissible m-1">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    Cari report activity dengan mengisi tanggal awal dan tanggal akhir.
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                  Cari report activity dengan mengisi tanggal awal dan tanggal akhir.
                 </div>
               </div>
               <!-- /.card-header -->
@@ -47,7 +47,7 @@
                         <input type="date" class="form-control" required>
                       </div>
                       <div class="col-md-4" style="margin-top:33px;">
-                      <button class="btn btn-md btn-primary">Cari</button>
+                        <button class="btn btn-md btn-primary">Cari</button>
                       </div>
                     </div>
                   </div>
@@ -60,50 +60,58 @@
               <div class="card-body">
                 <div class="bungkus" style="overflow: scroll;">
                   <table class="table table-bordered table-hover" style="table-layout: fixed; word-wrap: break-word;">
-                    <thead>                  
+                    <thead>
                       <tr align="center">
                         <th width="50px">No</th>
                         <th width="100px">Tanggal</th>
                         <th width="250px">Aktivitas</th>
                         <th width="250px">Catatan</th>
                         <th width="250px">Evaluasi</th>
+                        <th width="80px">Status</th>
+                        <th width="80px">Urgensi</th>
                       </tr>
                     </thead>
-                      <tr>
-                        <td>1</td>
-                        <td>6/10/2020</td>
-                        <td>Membuat invoice permintaan produk kertas A4</td>
-                        <td>Invoice belum diketahui nominalnya</td>
-                        <td>Minta data permintaan</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>7/10/2020</td>
-                        <td>Membuat laporan penjualan bulan Oktober</td>
-                        <td>Laporan belum dimintakan tanda tangan</td>
-                        <td>Segera konfirmasi ke Kepala Gudang</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>8/10/2020</td>
-                        <td>Membuat laporan penjualan bulan Oktober</td>
-                        <td>Laporan belum dimintakan tanda tangan</td>
-                        <td>Segera konfirmasi ke Kepala Gudang</td>
-                      </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>6/10/2020</td>
+                      <td>Membuat invoice permintaan produk kertas A4</td>
+                      <td>Invoice belum diketahui nominalnya</td>
+                      <td>Minta data permintaan</td>
+                      <td align="center"><span class="badge badge-danger">Pending</span></td>
+                      <td align="center"><span class="badge badge-danger">Top</span></td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>7/10/2020</td>
+                      <td>Membuat laporan penjualan bulan Oktober</td>
+                      <td>Laporan belum dimintakan tanda tangan</td>
+                      <td>Segera konfirmasi ke Kepala Gudang</td>
+                      <td align="center"><span class="badge badge-primary">Approve</span></td>
+                      <td align="center"><span class="badge badge-primary">Finish</span></td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>8/10/2020</td>
+                      <td>Membuat laporan penjualan bulan Oktober</td>
+                      <td>Laporan belum dimintakan tanda tangan</td>
+                      <td>Segera konfirmasi ke Kepala Gudang</td>
+                      <td align="center"><span class="badge badge-danger">Pending</span></td>
+                      <td align="center"><span class="badge badge-warning">Middle</span></td>
+                    </tr>
                     <tbody>
                     </tbody>
                   </table>
                 </div>
                 <br>
-                <a href="#" class="btn btn-primary btn"><i class="fas fa-download" style="color:white;"> Download</i></a>
+                <!-- <a href="#" class="btn btn-primary btn"><i class="fas fa-download" style="color:white;"> Download</i></a> -->
               </div>
-             </div>
+            </div>
           </div>
           <!-- ./col -->
         </div>
         <!-- /.row -->
         <!-- Main row -->
-        
+
         <!-- /.row (main row) -->
       </div><!-- /.container-fluid -->
     </section>
