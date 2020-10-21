@@ -24,10 +24,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $this->load->view('_partials/js');
         }
         public function daily(){
+            $data['daily'] = $this->karyawan_model->daily_tampil()->result();
+
             $this->load->view('_partials/header');
             $this->load->view('_partials/navbar');
             $this->load->view('_partials/sidebar_karyawan');
-            $this->load->view('karyawan/daily');
+            $this->load->view('karyawan/daily', $data);
             $this->load->view('_partials/footer');
             $this->load->view('_partials/js');
         }
@@ -70,6 +72,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $this->load->view('karyawan/daily_update');
             $this->load->view('_partials/footer');
             $this->load->view('_partials/js');
-        }                           
+        }
+        public function daily_proses_tambah(){
+
+            $tgl        = $this->input->post('tgl');
+            $aktivitas  = $this->input->post('aktivitas');
+            $hasil      = $this->input->post('hasil');
+            $catatan    = $this->input->post('catatan');
+            $evaluasi   = $this->input->post('evaluasi');
+            $status     = $this->input->post('status');
+
+            $data = array(
+                'tgl'       => $tgl,
+                'aktivitas' => $aktivitas,
+                'hasil'     => $hasil,
+                'catatan'   => $catatan,
+                'evaluasi'  => $evaluasi,
+                'status'    => $status,
+            );
+
+            $this->karyawan_model->daily_input($data);
+            redirect('karyawan/Karyawan/daily');
+        }
+                                   
     }
 ?>

@@ -48,21 +48,21 @@
                         <th width="250px">Catatan</th>
                         <th width="250px">Evaluasi</th>
                         <th width="70px">Status</th>
+                        <th width="80px">Urgensi</th>
                         <th width="80px">Aksi</th>
                       </tr>
                     </thead>
+                      <?php  
+                      $no =1;
+                      foreach ($daily as $dy): ?>
                       <tr>
-                        <td>1</td>
-                        <td>Membuat invoice permintaan produk kertas A4</td>
-                        <td align="center"><span class="badge badge-primary">Proses</span></td>
-                        <td>Invoice belum diketahui nominalnya</td>
-                        <td>
-                          Minta data permintaan
-                          <br><p class="text-sm text-muted">Hafidz AA.</p>
-                          Tugas yang anda lakukan sudah sesuai
-                          <br><p class="text-sm text-muted">Norhadi.</p>
-                        </td>
-                        <td align="center"><span class="badge badge-danger">Pending</span></td>
+                        <td><?php echo $no++ ?></td>
+                        <td><?php echo $dy->aktivitas ?></td>
+                        <td><span class="badge badge-primary"><?php echo $dy->hasil ?></span></td>
+                        <td><?php echo $dy->catatan ?></td>
+                        <td><?php echo $dy->evaluasi ?></td>
+                        <td><span class="badge badge-primary"><?php echo $dy->status ?></span></td>
+                        <td><span class="badge badge-primary"><?php echo $dy->urgensi ?></span></td>
                         <td align="center">
                           <div class="btn-group">
                           <a href="<?php echo base_url('karyawan/Karyawan/daily_update') ?>" class="btn btn-warning btn-sm"><i class="fas fa-edit" style="color:white;"></i></a>
@@ -70,7 +70,7 @@
                           </div>
                         </td>
                       </tr>
-                      
+                      <?php endforeach ?>
                     <tbody>
                     </tbody>
                   </table>

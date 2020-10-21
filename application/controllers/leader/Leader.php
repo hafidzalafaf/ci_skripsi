@@ -154,5 +154,32 @@
             $this->load->view('_partials/js');
             
         }
+        public function jurnal(){
+            $this->load->view('_partials/header');
+            $this->load->view('_partials/navbar');
+            $this->load->view('_partials/sidebar_leader');
+            $this->load->view('leader/jurnal');
+            $this->load->view('_partials/footer');
+            $this->load->view('_partials/js');
+            
+        }
+        public function jurnal_form(){
+            $this->load->view('_partials/header');
+            $this->load->view('_partials/navbar');
+            $this->load->view('_partials/sidebar_leader');
+            $this->load->view('leader/jurnal_form');
+            $this->load->view('_partials/footer');
+            $this->load->view('_partials/js');
+            
+        }
+        public function jurnal_update(){
+            $this->load->view('_partials/header');
+            $this->load->view('_partials/navbar');
+            $this->load->view('_partials/sidebar_leader');
+            $this->load->view('leader/jurnal_update');
+            $this->load->view('_partials/footer');
+            $this->load->view('_partials/js');
+            
+        }
     }
 ?>

@@ -1,5 +1,5 @@
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
@@ -9,8 +9,8 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="<?php echo base_url('karyawan/Karyawan') ?>">Home</a></li>
-              <li class="breadcrumb-item"><a href="<?php echo base_url('karyawan/Karyawan/daily') ?>">Daily Activity</a></li>
+              <li class="breadcrumb-item"><a href="<?php echo base_url('leader/Leader') ?>">Home</a></li>
+              <li class="breadcrumb-item"><a href="<?php echo base_url('leader/Leader/jurnal') ?>">Jurnal</a></li>
               <li class="breadcrumb-item active">Form</li>
             </ol>
           </div><!-- /.col -->
@@ -27,28 +27,32 @@
           <div class="col-lg-6 col-xs-12">
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Form Daily Activity</h3>
+                <h3 class="card-title">Form Daily Journal</h3>
               </div>
               <!-- /.card-header -->
-              <form role="form" action="<?php echo base_url('karyawan/Karyawan/daily_proses_tambah') ?>" method="POST">
+              <form role="form" action="<?php echo base_url('leader/Leader/jurnal') ?>">
                 <div class="card-body">
-                  <!-- Bagian Hidden -->
-                  <input name="hasil" type="text" value="Proses" class="form-control" hidden>
-                  <input name="status" type="text" value="Pending" class="form-control" hidden>
-                  <input name="catatan" type="text" value="-" class="form-control" hidden>
-                  <input name="evaluasi" type="text" value="-" class="form-control" hidden>
-
                   <div class="form-group">
-                    <input name="tgl" type="text" class="form-control" value=" <?php echo date("d-m-Y") ?> " hidden>
+                    <p class="text-sm">Nama Karyawan</p>
+                    <select name="hasil" class="form-control" required>
+                      <option value="">Pilih Karyawan</option>
+                      <option>Norhadi</option>
+                      <option>Hafid Al Afaf</option>
+                    </select>
                   </div>
                   <div class="form-group">
-                    <textarea name="aktivitas" class="form-control" rows="3" placeholder="Tuliskan rencana aktivitas" required></textarea>
+                    <input type="text" class="form-control" placeholder="13:00" readonly>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="6/10/2020" readonly>
+                  </div>
+                  <div class="form-group">
+                    <textarea class="form-control" rows="3" placeholder="Tuliskan aktivitas yang terjadi" required></textarea>
                   </div>
                 </div>
                 <div class="card-footer">
-                    <!-- <a href="leader_daily.php" class="btn btn-primary">Submit</a> -->
                     <button type="submit" class="btn btn-primary">Submit</button>
-                     <a href="<?php echo base_url('karyawan/Karyawan/daily') ?>" class="btn btn-secondary">Cancel</a>
+                     <a href="<?php echo base_url('leader/Leader/jurnal') ?>" class="btn btn-secondary">Cancel</a>
                 </div>
               </form>
              </div>
