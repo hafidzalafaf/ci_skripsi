@@ -54,4 +54,8 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['leader'] = 'leader/Leader';
 $route['hrd'] = 'hrd/Hrd';
+<<<<<<< HEAD
 $route['karyawan'] = 'karyawan/Karyawan';
+=======
+$route['karyawan'] = 'karyawan/Karyawan';
+>>>>>>> 754858cece448ab8d585fce00fc186564bfad181

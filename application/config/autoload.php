@@ -58,7 +58,11 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
+<<<<<<< HEAD
 $autoload['libraries'] = array('session');
+=======
+$autoload['libraries'] = array('database');
+>>>>>>> 754858cece448ab8d585fce00fc186564bfad181
 
 /*
 | -------------------------------------------------------------------
@@ -132,4 +136,4 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array();
+$autoload['model'] = array('karyawan_model');
