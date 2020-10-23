@@ -43,40 +43,15 @@
           </a>
         </li>
 
-<<<<<<< HEAD
-        <li class="nav-item">
+        <<<<<<< HEAD <li class="nav-item">
           <a href="<?php echo base_url('hrd/Hrd/daily') ?>" class="nav-link">
             <i class="nav-icon fas fa-archive"></i>
             <p>
               Daily Activity
             </p>
           </a>
-        </li>
+          </li>
 
-        <li class="nav-item">
-          <a href="<?php echo base_url('hrd/Hrd/gaji') ?>" class="nav-link">
-            <i class="nav-icon fas fa-credit-card"></i>
-            <p>
-              Gaji
-            </p>
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="<?php echo base_url('') ?>" class="nav-link">
-            <i class="nav-icon fas fa-sign-out-alt"></i>
-            <p>
-              Log Out
-            </p>
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <!-- /.sidebar-menu -->
-  </div>
-  <!-- /.sidebar -->
-</aside>
-=======
           <li class="nav-item">
             <a href="<?php echo base_url('hrd/Hrd/gaji') ?>" class="nav-link">
               <i class="nav-icon fas fa-credit-card"></i>
@@ -85,19 +60,43 @@
               </p>
             </a>
           </li>
-          
+
           <li class="nav-item">
-            <a href="<?php echo base_url('home/Login') ?>" class="nav-link">
+            <a href="<?php echo base_url('') ?>" class="nav-link">
               <i class="nav-icon fas fa-sign-out-alt"></i>
               <p>
                 Log Out
               </p>
             </a>
           </li>
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
-  </aside>
+      </ul>
+    </nav>
+    <!-- /.sidebar-menu -->
+  </div>
+  <!-- /.sidebar -->
+</aside>
+=======
+<li class="nav-item">
+  <a href="<?php echo base_url('hrd/Hrd/gaji') ?>" class="nav-link">
+    <i class="nav-icon fas fa-credit-card"></i>
+    <p>
+      Gaji
+    </p>
+  </a>
+</li>
+
+<li class="nav-item">
+  <a href="<?php echo base_url('home/Login') ?>" class="nav-link">
+    <i class="nav-icon fas fa-sign-out-alt"></i>
+    <p>
+      Log Out
+    </p>
+  </a>
+</li>
+</ul>
+</nav>
+<!-- /.sidebar-menu -->
+</div>
+<!-- /.sidebar -->
+</aside>
 >>>>>>> 754858cece448ab8d585fce00fc186564bfad181
