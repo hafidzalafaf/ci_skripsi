@@ -47,40 +47,13 @@
                         <th width="70px" align="center">Hasil</th>
                         <th width="250px">Catatan</th>
                         <th width="250px">Evaluasi</th>
-<<<<<<< HEAD
+
                         <th width="80px">Status</th>
-=======
-                        <th width="70px">Status</th>
->>>>>>> 754858cece448ab8d585fce00fc186564bfad181
                         <th width="80px">Urgensi</th>
                         <th width="80px">Aksi</th>
                       </tr>
                     </thead>
-<<<<<<< HEAD
-                    <tr>
-                      <td>1</td>
-                      <td>Membuat invoice permintaan produk kertas A4</td>
-                      <td align="center"><span class="badge badge-primary">Proses</span></td>
-                      <td>Invoice belum diketahui nominalnya</td>
-                      <td>
-                        Minta data permintaan
-                        <br>
-                        <p class="text-sm text-muted">Hafidz AA.</p>
-                        Tugas yang anda lakukan sudah sesuai
-                        <br>
-                        <p class="text-sm text-muted">Norhadi.</p>
-                      </td>
-                      <td align="center"><span class="badge badge-danger">Pending</span></td>
-                      <td align="center"><span class="badge badge-danger">Top</span></td>
-                      <td align="center">
-                        <div class="btn-group">
-                          <a href="<?php echo base_url('karyawan/Karyawan/daily_update') ?>" class="btn btn-warning btn-sm"><i class="fas fa-edit" style="color:white;"></i></a>
-                          <a href="" onclick="return confirm('Yakin menghapus data ?')" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
-                        </div>
-                      </td>
-                    </tr>
 
-=======
                       <?php  
                       $no =1;
                       foreach ($daily as $dy): ?>
@@ -100,7 +73,7 @@
                         </td>
                       </tr>
                       <?php endforeach ?>
->>>>>>> 754858cece448ab8d585fce00fc186564bfad181
+
                     <tbody>
                     </tbody>
                   </table>
