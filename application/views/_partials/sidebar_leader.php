@@ -61,7 +61,6 @@
           </a>
         </li>
 
-<<<<<<< HEAD
         <li class="nav-item">
           <a href="<?php echo base_url('leader/Leader/kinerja') ?>" class="nav-link">
             <i class="nav-icon fas fa-user-check"></i>
@@ -94,37 +93,3 @@
   </div>
   <!-- /.sidebar -->
 </aside>
-=======
-          <li class="nav-item">
-            <a href="<?php echo base_url('leader/Leader/jurnal') ?>" class="nav-link">
-              <i class="nav-icon fas fa-list"></i></i>
-              <p>
-                Jurnal
-              </p>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="<?php echo base_url('leader/Leader/gaji') ?>" class="nav-link">
-              <i class="nav-icon fas fa-credit-card"></i>
-              <p>
-                Gaji
-              </p>
-            </a>
-          </li>
-          
-          <li class="nav-item">
-            <a href="<?php echo base_url('home/Login') ?>" class="nav-link">
-              <i class="nav-icon fas fa-sign-out-alt"></i>
-              <p>
-                Log Out
-              </p>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
-  </aside>
->>>>>>> 754858cece448ab8d585fce00fc186564bfad181

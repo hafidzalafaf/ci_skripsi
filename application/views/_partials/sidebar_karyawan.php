@@ -62,11 +62,7 @@
           </li>
 
           <li class="nav-item">
-<<<<<<< HEAD
-            <a href="<?php echo base_url('') ?>" class="nav-link">
-=======
             <a href="<?php echo base_url('home/Login') ?>" class="nav-link">
->>>>>>> 754858cece448ab8d585fce00fc186564bfad181
               <i class="nav-icon fas fa-sign-out-alt"></i>
               <p>
                 Log Out
