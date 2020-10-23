@@ -55,8 +55,4 @@ $route['translate_uri_dashes'] = FALSE;
 $route['leader'] = 'leader/Leader';
 $route['hrd'] = 'hrd/Hrd';
 $route['karyawan'] = 'karyawan/Karyawan';
-<<<<<<< HEAD
 
-
-=======
->>>>>>> cb3611e94846a5abd7b2a0ebbc937dcb189e5903
