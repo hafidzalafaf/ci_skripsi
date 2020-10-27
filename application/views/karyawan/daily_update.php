@@ -30,22 +30,20 @@
                 <h3 class="card-title">Update Daily Activity</h3>
               </div>
               <!-- /.card-header -->
-              <form role="form" action="<?php echo base_url('karyawan/Karyawan/daily') ?>" method="POST">
+              <?php foreach($daily as $dy) {?>
+              <form role="form" action="<?php echo base_url('karyawan/Karyawan/daily_proses_update'); ?>" method="POST">
                 <div class="card-body">
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="6/10/2020" readonly>
-                  </div>
-                  <div class="form-group">
-                    <textarea class="form-control" rows="3" placeholder="Tulikan rencana aktivitas" required readonly=""></textarea>
-                  </div>
-                  <div class="form-group">
-                    <select name="hasil" class="form-control" required>
-                      <option value="Selesai">Selesai</option>
-                      <option value="Belum">Belum</option>
+                <input type="hidden" name="id" value="<?php echo $dy->id ?>">
+                <div class="form-group">
+                  <p class="text-sm">Masukkan Catatan</p>
+                  <input name="catatan" value="<?php echo $dy->catatan ?>" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <select name="hasil" class="form-control">
+                      <option value="Proses">Pilih Progres Pengerjaan</option>
+                      <option value="Selesai"<?php echo ($dy->hasil == 'Selesai' ? ' selected' : ''); ?>>Selesai</option>
+                      <option value="Belum"<?php echo ($dy->hasil == 'Belum' ? ' selected' : ''); ?>>Belum</option>
                      </select>
-                  </div>
-                  <div class="form-group">
-                    <textarea class="form-control" rows="3" placeholder="Tulikan catatan aktivitas" required></textarea>
                   </div>
                 </div>
                 <div class="card-footer">
@@ -53,6 +51,7 @@
                      <a href="<?php echo base_url('karyawan/Karyawan/daily') ?>" class="btn btn-secondary">Cancel</a>
                 </div>
               </form>
+              <?php } ?>
              </div>
           </div>
           <!-- ./col -->

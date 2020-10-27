@@ -1,4 +1,3 @@
-<!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -30,29 +29,17 @@
                 <h3 class="card-title">Form Daily Journal</h3>
               </div>
               <!-- /.card-header -->
-              <form role="form" action="<?php echo base_url('leader/Leader/jurnal') ?>">
+              <form role="form" action="<?php echo base_url('leader/Leader/jurnal_proses_tambah'); ?>" method="post">
                 <div class="card-body">
+                    <input name="nip" type="text" class="form-control" value="0"hidden>
+                    <input name="tgl" type="text" class="form-control" value=" <?php echo date("d-m-Y"); ?> " hidden>
+                    <input name="jam" type="text" class="form-control" value=" <?php echo date("H:m:s"); ?> " hidden>
                   <div class="form-group">
-                    <p class="text-sm">Nama Karyawan</p>
-                    <select name="hasil" class="form-control" required>
-                      <option value="">Pilih Karyawan</option>
-                      <option>Norhadi</option>
-                      <option>Hafid Al Afaf</option>
-                    </select>
+                    <input name="aktivitas" type="text" class="form-control" placeholder="Aktivitas">
                   </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="13:00" readonly>
-                  </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="6/10/2020" readonly>
-                  </div>
-                  <div class="form-group">
-                    <textarea class="form-control" rows="3" placeholder="Tuliskan aktivitas yang terjadi" required></textarea>
-                  </div>
-                </div>
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                     <a href="<?php echo base_url('leader/Leader/jurnal') ?>" class="btn btn-secondary">Cancel</a>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <a href="<?php echo base_url('leader/Leader/jurnal') ?>" class="btn btn-secondary">Cancel</a>
                 </div>
               </form>
              </div>
@@ -67,4 +54,4 @@
     </section>
     <!-- /.content -->
   </div>
-  <!-- /.content-wrapper -->
+  <!-- /.content-wrapper

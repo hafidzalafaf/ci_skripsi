@@ -44,6 +44,15 @@
         </li>
 
         <li class="nav-item">
+          <a href="<?php echo base_url('leader/Leader/jurnal') ?>" class="nav-link">
+            <i class="nav-icon fas fa-list"></i>
+            <p>
+              Jurnal
+            </p>
+          </a>
+        </li>
+
+        <li class="nav-item">
           <a href="<?php echo base_url('leader/Leader/evaluasi') ?>" class="nav-link">
             <i class="nav-icon fas fa-star"></i>
             <p>

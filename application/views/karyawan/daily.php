@@ -39,8 +39,8 @@
 
                 <br>
                 <div class="bungkus p-0" style="overflow: scroll;">
-                  <table class="table table-bordered table-hover" style="table-layout: fixed; word-wrap: break-word;">
-                    <thead>
+                  <table class="table table-hover" style="table-layout: fixed; word-wrap: break-word;">
+                    <thead class="">
                       <tr align="center">
                         <th width="50px">No</th>
                         <th width="250px">Aktivitas</th>
@@ -50,31 +50,36 @@
 
                         <th width="80px">Status</th>
                         <th width="80px">Urgensi</th>
-                        <th width="80px">Aksi</th>
+                        <th width="120px" colspan="2">Aksi</th>
                       </tr>
                     </thead>
-
+                    <tbody>
                       <?php  
                       $no =1;
                       foreach ($daily as $dy): ?>
                       <tr>
                         <td><?php echo $no++ ?></td>
                         <td><?php echo $dy->aktivitas ?></td>
-                        <td><span class="badge badge-primary"><?php echo $dy->hasil ?></span></td>
+                        <td>
+                          <?php echo ($dy->hasil == 'Belum' ? '<span class="badge badge-danger">Belum</span>' : ''); ?>
+                          <?php echo ($dy->hasil == 'Proses' ? '<span class="badge badge-primary">Proses</span>' : ''); ?>
+                          <?php echo ($dy->hasil == 'Selesai' ? '<span class="badge badge-success">Selesai</span>' : ''); ?>
+                        </td>
                         <td><?php echo $dy->catatan ?></td>
                         <td><?php echo $dy->evaluasi ?></td>
-                        <td><span class="badge badge-primary"><?php echo $dy->status ?></span></td>
-                        <td><span class="badge badge-primary"><?php echo $dy->urgensi ?></span></td>
+                        <td>
+                          <?php echo ($dy->status == 'Pending' ? '<span class="badge badge-danger">Pending</span>' : ''); ?>
+                          <?php echo ($dy->status == 'Approve' ? '<span class="badge badge-success">Approve</span>' : ''); ?>
+                        </td>
+                        <td><span class="badge badge-warning" style="color:white;"><?php echo $dy->urgensi ?></span></td>
+                        <td align="center" onclick="javascript: return confirm('Anda yakin ingin menghapus')">
+                          <?php  echo anchor('karyawan/Karyawan/daily_proses_hapus/'.$dy->id, '<div class="btn btn-danger ml-2"><i class="fas fa-trash"></i></div>'); ?>
+                        </td>
                         <td align="center">
-                          <div class="btn-group">
-                          <a href="<?php echo base_url('karyawan/Karyawan/daily_update') ?>" class="btn btn-warning btn-sm"><i class="fas fa-edit" style="color:white;"></i></a>
-                          <a href="" onclick="return confirm('Yakin menghapus data ?')" class="btn btn-danger btn-sm" ><i class="fas fa-trash"></i></a>
-                          </div>
+                          <?php  echo anchor('karyawan/Karyawan/daily_update/'.$dy->id,'<div class="btn btn-warning"><i class="fas fa-edit" style="color:white;"></i></div>'); ?>
                         </td>
                       </tr>
                       <?php endforeach ?>
-
-                    <tbody>
                     </tbody>
                   </table>
                 </div>

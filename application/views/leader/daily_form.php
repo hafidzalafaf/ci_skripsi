@@ -30,20 +30,29 @@
               <h3 class="card-title">Form Daily Activity</h3>
             </div>
             <!-- /.card-header -->
-            <form role="form" action="<?php echo base_url('leader/Leader/daily') ?>">
-              <div class="card-body">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="6/10/2020" readonly>
+            <form role="form" action="<?php echo base_url('leader/Leader/daily_proses_tambah') ?>" method="POST">
+                <div class="card-body">
+                  <!-- Bagian Hidden -->
+                  <input name="nip" type="text" value="-" class="form-control" hidden>
+                  <input name="hasil" type="text" value="Proses" class="form-control" hidden>
+                  <input name="status" type="text" value="Pending" class="form-control" hidden>
+                  <input name="catatan" type="text" value="-" class="form-control" hidden>
+                  <input name="evaluasi" type="text" value="-" class="form-control" hidden>
+                  <input name="urgensi" type="text" value="Not Graded" class="form-control" hidden>
+
+                  <div class="form-group">
+                    <input name="tgl" type="text" class="form-control" value=" <?php echo date("d-m-Y") ?> " hidden>
+                  </div>
+                  <div class="form-group">
+                    <textarea name="aktivitas" class="form-control" rows="3" placeholder="Tuliskan rencana aktivitas" required></textarea>
+                  </div>
                 </div>
-                <div class="form-group">
-                  <textarea class="form-control" rows="3" placeholder="Tuliskan rencana aktivitas" required></textarea>
+                <div class="card-footer">
+                    <!-- <a href="leader_daily.php" class="btn btn-primary">Submit</a> -->
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                     <a href="<?php echo base_url('leader/Leader/daily') ?>" class="btn btn-secondary">Cancel</a>
                 </div>
-              </div>
-              <div class="card-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <a href="<?php echo base_url('leader/Leader/daily') ?>" class="btn btn-secondary">Cancel</a>
-              </div>
-            </form>
+              </form>
           </div>
         </div>
         <!-- ./col -->

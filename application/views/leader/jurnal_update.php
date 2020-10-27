@@ -30,7 +30,7 @@
                 <h3 class="card-title">Update Daily Journal</h3>
               </div>
               <!-- /.card-header -->
-              <form role="form" action="<?php echo base_url('leader/Leader/jurnal') ?>">
+              <form role="form" action="<?php echo base_url('leader/Leader/jurnal_update') ?>">
                 <div class="card-body">
                   <div class="form-group">
                     <input type="text" class="form-control" placeholder="Norhadi" readonly>
