@@ -43,15 +43,16 @@
                     </tr>
                   </thead>
                   <tbody>
-                      <?php  
-                      $no =1;
-                      foreach ($jurnal as $ju): ?>                  
+                    <?php  
+                    $no =1;
+                    foreach ($jurnal as $ju): ?>                  
                     <tr align="center">
     
                       <td><?php echo $no++ ?></td>
                       <td><a href="<?php echo $ju->nip ?>"><span class="badge badge-primary"><?php echo $ju->nip ?></span></a></td>
                       <td><?php echo $ju->aktivitas ?></td>
-                      <td><?php echo $ju->jam ?></td>
+                      <td>Jam error</td>
+<!--                       <td><?php echo $ju->jam ?></td> -->
                       <td><?php echo $ju->tgl ?></td>
                       <td align="center" onclick="javascript: return confirm('Anda yakin ingin menghapus')">
                           <?php  echo anchor('leader/Leader/jurnal_proses_hapus/'.$ju->id, '<div class="btn btn-danger ml-2"><i class="fas fa-trash"></i></div>'); ?>

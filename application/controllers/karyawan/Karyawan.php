@@ -9,106 +9,6 @@ class Karyawan extends CI_Controller
         $this->load->library('session');
     }
 
-<<<<<<< HEAD
-            $this->load->view('_partials/header');
-            $this->load->view('_partials/navbar');
-            $this->load->view('_partials/sidebar_karyawan');
-            $this->load->view('karyawan/daily', $data);
-            $this->load->view('_partials/footer');
-            $this->load->view('_partials/js');
-        }
-        public function evaluasi(){
-            $this->load->view('_partials/header');
-            $this->load->view('_partials/navbar');
-            $this->load->view('_partials/sidebar_karyawan');
-            $this->load->view('karyawan/evaluasi');
-            $this->load->view('_partials/footer');
-            $this->load->view('_partials/js');
-        }
-        public function gaji(){
-            $this->load->view('_partials/header');
-            $this->load->view('_partials/navbar');
-            $this->load->view('_partials/sidebar_karyawan');
-            $this->load->view('karyawan/gaji');
-            $this->load->view('_partials/footer');
-            $this->load->view('_partials/js');
-        }
-        public function daily_form(){
-            $this->load->view('_partials/header');
-            $this->load->view('_partials/navbar');
-            $this->load->view('_partials/sidebar_karyawan');
-            $this->load->view('karyawan/daily_form');
-            $this->load->view('_partials/footer');
-            $this->load->view('_partials/js');
-        }
-        public function daily_report(){
-            $this->load->view('_partials/header');
-            $this->load->view('_partials/navbar');
-            $this->load->view('_partials/sidebar_karyawan');
-            $this->load->view('karyawan/daily_report');
-            $this->load->view('_partials/footer');
-            $this->load->view('_partials/js');
-        }
-        public function daily_proses_tambah(){
-
-            $nip        = $this->input->post('nip');
-            $tgl        = $this->input->post('tgl');
-            $aktivitas  = $this->input->post('aktivitas');
-            $hasil      = $this->input->post('hasil');
-            $catatan    = $this->input->post('catatan');
-            $evaluasi   = $this->input->post('evaluasi');
-            $status     = $this->input->post('status');
-            $urgensi    = $this->input->post('urgensi');
-
-            $data = array(
-                'nip'       => $nip,
-                'tgl'       => $tgl,
-                'aktivitas' => $aktivitas,
-                'hasil'     => $hasil,
-                'catatan'   => $catatan,
-                'evaluasi'  => $evaluasi,
-                'status'    => $status,
-                'urgensi'    => $urgensi,
-            );
-
-            $this->karyawan_model->daily_input($data, 'tb_kyn_daily');
-            redirect('karyawan/Karyawan/daily');
-        }
-        public function daily_proses_hapus($id){
-            $where = array('id' => $id);
-            $this->karyawan_model->daily_hapus($where, 'tb_kyn_daily');
-            redirect ("karyawan/Karyawan/daily");
-        }
-        public function daily_update($id){
-            $where = array('id' =>$id);
-            $data['daily'] = $this->karyawan_model->daily_update($where, 'tb_kyn_daily')->result();
-
-            $this->load->view('_partials/header');
-            $this->load->view('_partials/navbar');
-            $this->load->view('_partials/sidebar_karyawan');
-            $this->load->view('karyawan/daily_update', $data);
-            $this->load->view('_partials/footer');
-            $this->load->view('_partials/js');
-        }
-        public function daily_proses_update(){
-            $id = $this->input->post('id');
-            $catatan    = $this->input->post('catatan');
-            $hasil      = $this->input->post('hasil');
-
-
-            $data = array(
-                'catatan'   => $catatan,
-                'hasil'     => $hasil,
-            );
-
-            $where = array(
-                'id' => $id
-            );
-            $this->karyawan_model->daily_update_proses($where,$data,'tb_kyn_daily');
-            redirect('karyawan/Karyawan/daily');
-        }
-                                   
-=======
     public function index()
     {
         // mengambil data dari database berdasarakan session yang sudah terbentuk
@@ -188,10 +88,14 @@ class Karyawan extends CI_Controller
         $this->load->view('_partials/footer');
         $this->load->view('_partials/js');
     }
-    public function daily_update()
+    public function daily_update($id)
     {
         // mengambil data dari database berdasarakan session yang sudah terbentuk
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+
+        $where = array('id' =>$id);
+        $data['daily'] = $this->karyawan_model->daily_update($where, 'tb_kyn_daily')->result();
+
         $this->load->view('_partials/header');
         $this->load->view('_partials/navbar');
         $this->load->view('_partials/sidebar_karyawan', $data);
@@ -199,27 +103,55 @@ class Karyawan extends CI_Controller
         $this->load->view('_partials/footer');
         $this->load->view('_partials/js');
     }
-    public function daily_proses_tambah()
-    {
 
+    public function daily_proses_update(){
+        $id = $this->input->post('id');
+        $catatan    = $this->input->post('catatan');
+        $hasil      = $this->input->post('hasil');
+
+
+        $data = array(
+            'catatan'   => $catatan,
+            'hasil'     => $hasil,
+        );
+
+        $where = array(
+            'id' => $id
+        );
+        $this->karyawan_model->daily_update_proses($where,$data,'tb_kyn_daily');
+        redirect('karyawan/Karyawan/daily');
+    }
+
+    public function daily_proses_tambah(){
+
+        $nip        = $this->input->post('nip');
         $tgl        = $this->input->post('tgl');
         $aktivitas  = $this->input->post('aktivitas');
         $hasil      = $this->input->post('hasil');
         $catatan    = $this->input->post('catatan');
         $evaluasi   = $this->input->post('evaluasi');
         $status     = $this->input->post('status');
+        $urgensi    = $this->input->post('urgensi');
 
         $data = array(
+            'nip'       => $nip,
             'tgl'       => $tgl,
             'aktivitas' => $aktivitas,
             'hasil'     => $hasil,
             'catatan'   => $catatan,
             'evaluasi'  => $evaluasi,
             'status'    => $status,
+            'urgensi'    => $urgensi,
         );
 
-        $this->karyawan_model->daily_input($data);
+        $this->karyawan_model->daily_input($data, 'tb_kyn_daily');
         redirect('karyawan/Karyawan/daily');
->>>>>>> b42615312c136e746a35ce973e02e9dcfbbf6942
     }
+
+    public function daily_proses_hapus($id){
+        $where = array('id' => $id);
+        $this->karyawan_model->daily_hapus($where, 'tb_kyn_daily');
+        redirect ("karyawan/Karyawan/daily");
+    }
+
 }
