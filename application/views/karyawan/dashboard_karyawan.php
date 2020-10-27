@@ -29,9 +29,9 @@
             </div>
             <!-- /.card-header -->
             <div class="card-body">
-              <p>Selamat datang di sistem kepegawaian PT. Sinar Grafindo</p>
+              <p>Selamat datang <span class="text-primary"><?php echo $user['username']; ?></span> di sistem kepegawaian PT. Sinar Grafindo</p>
             </div>
-           </div>
+          </div>
         </div>
 
         <div class="col-lg-6 col-12">
@@ -40,9 +40,9 @@
             <div class="card-header">
               <h3 class="card-title">Approve Graphic</h3>
             </div>
-              <div class="card-body">
-                      <div id="bar-chart" style="height: 300px;"></div>
-              </div>
+            <div class="card-body">
+              <div id="bar-chart" style="height: 300px;"></div>
+            </div>
             <!-- /.card-body -->
           </div>
           <!-- /.card -->
@@ -53,7 +53,7 @@
           <!-- BAR CHART -->
           <div class="card card-primary">
             <div class="card-header">
-              <h3 class="card-title">Performance Rate</h3>                
+              <h3 class="card-title">Performance Rate</h3>
             </div>
             <div class="card-body">
               <div class="chart">
@@ -69,7 +69,7 @@
       </div>
       <!-- /.row -->
       <!-- Main row -->
-      
+
       <!-- /.row (main row) -->
     </div><!-- /.container-fluid -->
 
