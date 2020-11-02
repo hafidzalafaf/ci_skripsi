@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 <?php
 class Leader_model extends CI_Model
 {
+=======
+<?php 
+class Leader_model extends CI_Model{
+>>>>>>> 6bb646035d0600f42797a30e79044b14e139a53b
 	public function daily_tampil()
 	{
 		return $this->db->get('tb_ldr_daily');
@@ -40,5 +45,39 @@ class Leader_model extends CI_Model
 	{
 		$this->db->where($where);
 		$this->db->delete($table);
+<<<<<<< HEAD
 	}
+=======
+
+	}
+	public function kinerja_tampil()
+	{
+		return $this->db->get('tb_ldr_kinerja');
+
+	}
+	public function kinerja_input($data,$table){
+		$this->db->insert($table,$data);
+
+	}
+	public function kinerja_hapus($where,$table){
+		$this->db->where($where);
+		$this->db->delete($table);
+
+	}
+	public function kinerja_update($where,$table){
+		return $this->db->get_where($table,$where);
+	}
+	public function kinerja_update_proses($where,$data,$table){
+		$this->db->where($where);
+		$this->db->update($table,$data);
+	}
+	public function kinerja_keyword($keyword){
+		$this->db->select('*');
+		$this->db->from('tb_ldr_kinerja');
+		$this->db->like('nama_karyawan', $keyword);
+		$this->db->or_like('tahun', $keyword);
+		$this->db->or_like('point', $keyword);
+		return $this ->db->get()->result();
+	}					
+>>>>>>> 6bb646035d0600f42797a30e79044b14e139a53b
 }
