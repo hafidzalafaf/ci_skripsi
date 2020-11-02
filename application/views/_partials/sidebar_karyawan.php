@@ -17,10 +17,10 @@
     }
     ?>
 
-    <a href="<?php echo base_url($url_dashboard); ?>" class="brand-link">
+    <p class="brand-link mb-0">
       <img src="<?php echo base_url('assets/dist/img/logo_pt_icon.png') ?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">PT. Sinar Grafindo</span>
-    </a>
+    </p>
 
     <!-- Sidebar -->
     <div class="sidebar">
@@ -44,22 +44,30 @@
           <!-- QUERY MENU -->
 
           <?php
-          $sidebar = $this->db->get_where('user_access_menu', ['role_id' => $role_id])->result_array();
-          // $sidebabr = $this->db->query("SELECT * FROM 'user_sub_menu' WHERE 'role_id' = $role_id AND 'is_Active' = 1")->result_Array;
-          // var_dump($sidebar);
-          // die;
+          // $sidebar = $this->db->get_where('user_access_menu', ['role_id' => $role_id])->result_array();
+          $this->db->select('*');
+          $this->db->from('user_access_menu');
+          $this->db->where('role_id', $role_id);
+          $this->db->order_by('urutan', 'asc');
+          $query = $this->db->get();
+          $sidebar = $query->result_array();
+
           foreach ($sidebar as $sb) :
             $id_menu = $sb['menu_id'];
+            $menu = $this->db->get_where('user_sub_menu', ['id_menu' => $id_menu, 'is_active' => 1])->result_array();
 
-            $menu = $this->db->get_where('user_sub_menu', ['id_menu' => $id_menu])->result_array();
             foreach ($menu as $m) :
           ?>
-
               <li class="nav-item">
-                <a href="<?php echo base_url($m['url']); ?>" class="nav-link">
-                  <i class="<?php echo $m['icon']; ?>"></i>
-                  <p><?php echo $m['judul']; ?></p>
-                </a>
+                <?php if ($judul == $m['segment_menu']) : ?>
+                  <a href="<?php echo base_url($m['url']); ?>" class="nav-link active">
+                  <?php else : ?>
+                    <a href="<?php echo base_url($m['url']); ?>" class="nav-link">
+                    <?php endif; ?>
+
+                    <i class="<?php echo $m['icon']; ?>"></i>
+                    <p><?php echo $m['judul']; ?></p>
+                    </a>
               </li>
 
           <?php

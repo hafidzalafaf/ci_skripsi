@@ -87,4 +87,9 @@ class Login extends CI_Controller
         $this->session->set_flashdata('message', '<div class="alert alert-warning text-white" role="alert">Anda telah logout!</div>');
         redirect('home/Login');
     }
+
+    public function blocked()
+    {
+        $this->load->view('home/blocked');
+    }
 }

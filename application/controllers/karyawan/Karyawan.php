@@ -7,12 +7,15 @@ class Karyawan extends CI_Controller
     {
         parent::__construct();
         $this->load->library('session');
+        cek_login();
     }
 
     public function index()
     {
         // mengambil data dari database berdasarakan session yang sudah terbentuk
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['judul'] = "Karyawan Dashboard";
+
         $this->load->view('_partials/header');
         $this->load->view('_partials/navbar');
         $this->load->view('_partials/sidebar_karyawan', $data);
@@ -25,6 +28,8 @@ class Karyawan extends CI_Controller
     {
         // mengambil data dari database berdasarakan session yang sudah terbentuk
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['judul'] = "Karyawan Data Pribadi";
+
         $this->load->view('_partials/header');
         $this->load->view('_partials/navbar');
         $this->load->view('_partials/sidebar_karyawan', $data);
@@ -37,6 +42,8 @@ class Karyawan extends CI_Controller
         // mengambil data dari database berdasarakan session yang sudah terbentuk
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $data['daily'] = $this->karyawan_model->daily_tampil()->result();
+        $data['judul'] = "Karyawan Daily";
+
         $this->load->view('_partials/header');
         $this->load->view('_partials/navbar');
         $this->load->view('_partials/sidebar_karyawan', $data);
@@ -48,6 +55,8 @@ class Karyawan extends CI_Controller
     {
         // mengambil data dari database berdasarakan session yang sudah terbentuk
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['judul'] = "Karyawan Evaluasi";
+
         $this->load->view('_partials/header');
         $this->load->view('_partials/navbar');
         $this->load->view('_partials/sidebar_karyawan', $data);
@@ -59,6 +68,8 @@ class Karyawan extends CI_Controller
     {
         // mengambil data dari database berdasarakan session yang sudah terbentuk
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['judul'] = "Karyawan Gaji";
+
         $this->load->view('_partials/header');
         $this->load->view('_partials/navbar');
         $this->load->view('_partials/sidebar_karyawan', $data);
@@ -70,6 +81,8 @@ class Karyawan extends CI_Controller
     {
         // mengambil data dari database berdasarakan session yang sudah terbentuk
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['judul'] = "Karyawan Daily";
+
         $this->load->view('_partials/header');
         $this->load->view('_partials/navbar');
         $this->load->view('_partials/sidebar_karyawan', $data);
@@ -81,6 +94,8 @@ class Karyawan extends CI_Controller
     {
         // mengambil data dari database berdasarakan session yang sudah terbentuk
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['judul'] = "Karyawan Daily";
+
         $this->load->view('_partials/header');
         $this->load->view('_partials/navbar');
         $this->load->view('_partials/sidebar_karyawan', $data);
@@ -92,9 +107,9 @@ class Karyawan extends CI_Controller
     {
         // mengambil data dari database berdasarakan session yang sudah terbentuk
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
-
-        $where = array('id' =>$id);
+        $where = array('id' => $id);
         $data['daily'] = $this->karyawan_model->daily_update($where, 'tb_kyn_daily')->result();
+        $data['judul'] = "Karyawan Daily";
 
         $this->load->view('_partials/header');
         $this->load->view('_partials/navbar');
@@ -104,7 +119,8 @@ class Karyawan extends CI_Controller
         $this->load->view('_partials/js');
     }
 
-    public function daily_proses_update(){
+    public function daily_proses_update()
+    {
         $id = $this->input->post('id');
         $catatan    = $this->input->post('catatan');
         $hasil      = $this->input->post('hasil');
@@ -118,11 +134,12 @@ class Karyawan extends CI_Controller
         $where = array(
             'id' => $id
         );
-        $this->karyawan_model->daily_update_proses($where,$data,'tb_kyn_daily');
+        $this->karyawan_model->daily_update_proses($where, $data, 'tb_kyn_daily');
         redirect('karyawan/Karyawan/daily');
     }
 
-    public function daily_proses_tambah(){
+    public function daily_proses_tambah()
+    {
 
         $nip        = $this->input->post('nip');
         $tgl        = $this->input->post('tgl');
@@ -148,10 +165,10 @@ class Karyawan extends CI_Controller
         redirect('karyawan/Karyawan/daily');
     }
 
-    public function daily_proses_hapus($id){
+    public function daily_proses_hapus($id)
+    {
         $where = array('id' => $id);
         $this->karyawan_model->daily_hapus($where, 'tb_kyn_daily');
-        redirect ("karyawan/Karyawan/daily");
+        redirect("karyawan/Karyawan/daily");
     }
-
 }

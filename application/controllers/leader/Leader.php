@@ -7,12 +7,15 @@ class Leader extends CI_Controller
     {
         parent::__construct();
         $this->load->library('session');
+        cek_login();
     }
 
     public function index()
     {
         // mengambil data dari database berdasarakan session yang sudah terbentuk
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['judul'] = 'Leader Dashboard';
+
         $this->load->view('_partials/header');
         $this->load->view('_partials/navbar');
         $this->load->view('_partials/sidebar_karyawan', $data);
@@ -25,6 +28,8 @@ class Leader extends CI_Controller
     {
         // mengambil data dari database berdasarakan session yang sudah terbentuk
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['judul'] = 'Leader Daily';
+
         $this->load->view('_partials/header');
         $this->load->view('_partials/navbar');
         $this->load->view('_partials/sidebar_karyawan', $data);
@@ -37,6 +42,8 @@ class Leader extends CI_Controller
     {
         // mengambil data dari database berdasarakan session yang sudah terbentuk
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['judul'] = 'Leader Daily';
+
         $this->load->view('_partials/header');
         $this->load->view('_partials/navbar');
         $this->load->view('_partials/sidebar_karyawan', $data);
@@ -50,6 +57,8 @@ class Leader extends CI_Controller
         // mengambil data dari database berdasarakan session yang sudah terbentuk
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $data['daily'] = $this->leader_model->daily_tampil()->result();
+        $data['judul'] = 'Leader Daily';
+
         $this->load->view('_partials/header');
         $this->load->view('_partials/navbar');
         $this->load->view('_partials/sidebar_karyawan', $data);
@@ -62,6 +71,8 @@ class Leader extends CI_Controller
     {
         // mengambil data dari database berdasarakan session yang sudah terbentuk
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['judul'] = 'Leader Data';
+
         $this->load->view('_partials/header');
         $this->load->view('_partials/navbar');
         $this->load->view('_partials/sidebar_karyawan', $data);
@@ -74,6 +85,8 @@ class Leader extends CI_Controller
     {
         // mengambil data dari database berdasarakan session yang sudah terbentuk
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['judul'] = 'Leader Evaluasi';
+
         $this->load->view('_partials/header');
         $this->load->view('_partials/navbar');
         $this->load->view('_partials/sidebar_karyawan', $data);
@@ -86,6 +99,8 @@ class Leader extends CI_Controller
     {
         // mengambil data dari database berdasarakan session yang sudah terbentuk
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['judul'] = 'Leader Gaji';
+
         $this->load->view('_partials/header');
         $this->load->view('_partials/navbar');
         $this->load->view('_partials/sidebar_karyawan', $data);
@@ -98,6 +113,8 @@ class Leader extends CI_Controller
     {
         // mengambil data dari database berdasarakan session yang sudah terbentuk
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['judul'] = 'Leader Kinerja';
+
         $this->load->view('_partials/header');
         $this->load->view('_partials/navbar');
         $this->load->view('_partials/sidebar_karyawan', $data);
@@ -110,6 +127,8 @@ class Leader extends CI_Controller
     {
         // mengambil data dari database berdasarakan session yang sudah terbentuk
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['judul'] = 'Leader Kinerja';
+
         $this->load->view('_partials/header');
         $this->load->view('_partials/navbar');
         $this->load->view('_partials/sidebar_karyawan', $data);
@@ -122,6 +141,8 @@ class Leader extends CI_Controller
     {
         // mengambil data dari database berdasarakan session yang sudah terbentuk
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['judul'] = 'Leader Kinerja';
+
         $this->load->view('_partials/header');
         $this->load->view('_partials/navbar');
         $this->load->view('_partials/sidebar_karyawan', $data);
@@ -134,6 +155,8 @@ class Leader extends CI_Controller
     {
         // mengambil data dari database berdasarakan session yang sudah terbentuk
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['judul'] = 'Leader Monitoring';
+
         $this->load->view('_partials/header');
         $this->load->view('_partials/navbar');
         $this->load->view('_partials/sidebar_karyawan', $data);
@@ -146,6 +169,8 @@ class Leader extends CI_Controller
     {
         // mengambil data dari database berdasarakan session yang sudah terbentuk
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['judul'] = 'Leader Monitoring';
+
         $this->load->view('_partials/header');
         $this->load->view('_partials/navbar');
         $this->load->view('_partials/sidebar_karyawan', $data);
@@ -158,6 +183,8 @@ class Leader extends CI_Controller
     {
         // mengambil data dari database berdasarakan session yang sudah terbentuk
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['judul'] = 'Leader Monitoring';
+
         $this->load->view('_partials/header');
         $this->load->view('_partials/navbar');
         $this->load->view('_partials/sidebar_karyawan', $data);
@@ -170,6 +197,8 @@ class Leader extends CI_Controller
     {
         // mengambil data dari database berdasarakan session yang sudah terbentuk
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['judul'] = 'Leader Monitoring';
+
         $this->load->view('_partials/header');
         $this->load->view('_partials/navbar');
         $this->load->view('_partials/sidebar_karyawan', $data);
@@ -182,6 +211,7 @@ class Leader extends CI_Controller
         // mengambil data dari database berdasarakan session yang sudah terbentuk
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $data['jurnal'] = $this->leader_model->jurnal_tampil()->result();
+        $data['judul'] = 'Leader Jurnal';
 
         $this->load->view('_partials/header');
         $this->load->view('_partials/navbar');
@@ -194,6 +224,7 @@ class Leader extends CI_Controller
     {
         // mengambil data dari database berdasarakan session yang sudah terbentuk
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['judul'] = 'Leader Jurnal';
 
         $this->load->view('_partials/header');
         $this->load->view('_partials/navbar');
@@ -206,6 +237,8 @@ class Leader extends CI_Controller
     {
         // mengambil data dari database berdasarakan session yang sudah terbentuk
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['judul'] = 'Leader Jurnal';
+
         $this->load->view('_partials/header');
         $this->load->view('_partials/navbar');
         $this->load->view('_partials/sidebar_karyawan', $data);
@@ -213,8 +246,9 @@ class Leader extends CI_Controller
         $this->load->view('_partials/footer');
         $this->load->view('_partials/js');
     }
-    public function daily_proses_tambah(){
-        $nip        = $this->input->post('nip');    
+    public function daily_proses_tambah()
+    {
+        $nip        = $this->input->post('nip');
         $tgl        = $this->input->post('tgl');
         $aktivitas  = $this->input->post('aktivitas');
         $hasil      = $this->input->post('hasil');
@@ -235,63 +269,67 @@ class Leader extends CI_Controller
         );
 
         $this->leader_model->daily_input($data, 'tb_ldr_daily');
-            redirect('leader/Leader/daily');
-        }
-        public function daily_proses_hapus($id){
-            $where = array('id' => $id);
-            $this->leader_model->daily_hapus($where, 'tb_ldr_daily');
-            redirect ("leader/Leader/daily");
-        }
-        public function daily_update($id){
-            $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
-            $where = array('id' =>$id);
-            $data['daily'] = $this->leader_model->daily_update($where, 'tb_ldr_daily')->result();
-
-            $this->load->view('_partials/header');
-            $this->load->view('_partials/navbar');
-            $this->load->view('_partials/sidebar_karyawan', $data);
-            $this->load->view('leader/daily_update', $data);
-            $this->load->view('_partials/footer');
-            $this->load->view('_partials/js');
-        }
-        public function daily_proses_update(){
-            $id = $this->input->post('id');
-            $catatan    = $this->input->post('catatan');
-            $hasil      = $this->input->post('hasil');
-
-
-            $data = array(
-                'catatan'   => $catatan,
-                'hasil'     => $hasil,
-            );
-
-            $where = array(
-                'id' => $id
-            );
-            $this->leader_model->daily_update_proses($where,$data,'tb_ldr_daily');
-            redirect('leader/Leader/daily');
-        }        
-        public function jurnal_proses_tambah(){
-            $nip        = $this->input->post('nip');
-            $aktivitas  = $this->input->post('aktivitas');
-            $tgl        = $this->input->post('tgl');
-            $jam        = $this->input->post('jam');    
-
-            $data = array(
-                'nip'       => $nip,
-                'aktivitas' => $aktivitas,
-                'jam'       => $jam,
-                'tgl'       => $tgl,
-            );
-
-            $this->leader_model->jurnal_input($data, 'tb_ldr_jurnal');
-            redirect('leader/Leader/jurnal');
-        }
-        public function jurnal_proses_hapus($id){
-            $where = array('id' => $id);
-            $this->karyawan_model->daily_hapus($where, 'tb_ldr_jurnal');
-            redirect ("leader/Leader/jurnal");
-        }        
+        redirect('leader/Leader/daily');
     }
-?>
+    public function daily_proses_hapus($id)
+    {
+        $where = array('id' => $id);
+        $this->leader_model->daily_hapus($where, 'tb_ldr_daily');
+        redirect("leader/Leader/daily");
+    }
+    public function daily_update($id)
+    {
+        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $where = array('id' => $id);
+        $data['daily'] = $this->leader_model->daily_update($where, 'tb_ldr_daily')->result();
+        $data['judul'] = 'Leader Daily';
 
+        $this->load->view('_partials/header');
+        $this->load->view('_partials/navbar');
+        $this->load->view('_partials/sidebar_karyawan', $data);
+        $this->load->view('leader/daily_update', $data);
+        $this->load->view('_partials/footer');
+        $this->load->view('_partials/js');
+    }
+    public function daily_proses_update()
+    {
+        $id = $this->input->post('id');
+        $catatan    = $this->input->post('catatan');
+        $hasil      = $this->input->post('hasil');
+
+
+        $data = array(
+            'catatan'   => $catatan,
+            'hasil'     => $hasil,
+        );
+
+        $where = array(
+            'id' => $id
+        );
+        $this->leader_model->daily_update_proses($where, $data, 'tb_ldr_daily');
+        redirect('leader/Leader/daily');
+    }
+    public function jurnal_proses_tambah()
+    {
+        $nip        = $this->input->post('nip');
+        $aktivitas  = $this->input->post('aktivitas');
+        $tgl        = $this->input->post('tgl');
+        $jam        = $this->input->post('jam');
+
+        $data = array(
+            'nip'       => $nip,
+            'aktivitas' => $aktivitas,
+            'jam'       => $jam,
+            'tgl'       => $tgl,
+        );
+
+        $this->leader_model->jurnal_input($data, 'tb_ldr_jurnal');
+        redirect('leader/Leader/jurnal');
+    }
+    public function jurnal_proses_hapus($id)
+    {
+        $where = array('id' => $id);
+        $this->karyawan_model->daily_hapus($where, 'tb_ldr_jurnal');
+        redirect("leader/Leader/jurnal");
+    }
+}
