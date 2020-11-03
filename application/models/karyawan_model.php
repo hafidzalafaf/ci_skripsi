@@ -1,4 +1,5 @@
 <?php 
+defined('BASEPATH') or exit('No direct script access allowed');
 class Karyawan_model extends CI_Model{
 	public function daily_tampil()
 	{
@@ -21,5 +22,3 @@ class Karyawan_model extends CI_Model{
 		$this->db->update($table,$data);
 	}
 }
-
-?>

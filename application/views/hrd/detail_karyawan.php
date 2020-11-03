@@ -66,32 +66,37 @@
                       <th width="120px">Aksi</th>
                     </tr>
                   </thead>
-                  <tr>
-                    <td>1</td>
-                    <td>Hafidz Al Afaf</td>
-                    <td>0812121021</td>
-                    <td>Marketing</td>
-                    <td>Staff IT</td>
-                    <td>PT.Aneka Grafindo</td>
+                  <?php
+                  $no = 1;
+                  foreach ($divisi as $dv) : ?>
+                    <tr>
+                      <td><?php echo $no++; ?></td>
+                      <td><?php echo $dv['nama']; ?></td>
+                      <td><?php echo $dv['nip']; ?></td>
+                      <td>Marketing</td>
+                      <td>Staff IT</td>
+                      <td>PT.Aneka Grafindo</td>
 
-                    <?php
-                    if ($this->session->userdata('role_id') != '4') { ?>
-                      <td class="d-flex justify-content-center"><a href="<?php echo base_url('hrd/Hrd/gaji_karyawan') ?>" class="btn btn-primary btn-sm" title="Lihat Gaji">Lihat</a></td>
-                      <td align="center"><a href="<?php echo base_url('hrd/Hrd/kinerja') ?>" class="btn btn-primary btn-sm" title="Lihat Kinerja">Lihat</a></td>
-                      <td align="center">
-                        <div class="btn-group">
-                          <a href="<?php echo base_url('karyawan/Karyawan/data_pribadi') ?>" class="btn btn-success btn-sm" title="Lihat Detail"><i class="fas fa-eye" style="color:white;"></i></a>
-                          <a href="<?php echo base_url('hrd/Hrd/tambah_data_karyawan') ?>" class="btn btn-warning btn-sm" title="Update"><i class="fas fa-edit" style="color:white;"></i></a>
-                          <a href="" onclick="return confirm('Yakin menghapus data ?')" class="btn btn-danger btn-sm" title="Hapus"><i class="fas fa-trash"></i></a>
-                        </div>
-                      </td>
-                    <?php } else { ?>
-                      <td align="center">
-                        <div class="btn-group">
-                          <a href="<?php echo base_url('karyawan/Karyawan/data_pribadi') ?>" class="btn btn-success btn-sm" title="Lihat Detail"><i class="fas fa-eye" style="color:white;"></i></a>
-                      </td>
-                    <?php } ?>
-                  </tr>
+                      <?php
+                      if ($this->session->userdata('role_id') != '4') { ?>
+                        <td class="d-flex justify-content-center"><a href="<?php echo base_url('hrd/Hrd/gaji_karyawan') ?>" class="btn btn-primary btn-sm" title="Lihat Gaji">Lihat</a></td>
+                        <td align="center"><a href="<?php echo base_url('hrd/Hrd/kinerja') ?>" class="btn btn-primary btn-sm" title="Lihat Kinerja">Lihat</a></td>
+                        <td align="center">
+                          <div class="btn-group">
+                            <a href="<?php echo base_url('karyawan/Karyawan/data_pribadi') ?>" class="btn btn-success btn-sm" title="Lihat Detail"><i class="fas fa-eye" style="color:white;"></i></a>
+                            <a href="<?php echo base_url('hrd/Hrd/tambah_data_karyawan') ?>" class="btn btn-warning btn-sm" title="Update"><i class="fas fa-edit" style="color:white;"></i></a>
+                            <a href="" onclick="return confirm('Yakin menghapus data ?')" class="btn btn-danger btn-sm" title="Hapus"><i class="fas fa-trash"></i></a>
+                          </div>
+                        </td>
+                      <?php } else { ?>
+                        <td align="center">
+                          <div class="btn-group">
+                            <a href="<?php echo base_url('karyawan/Karyawan/data_pribadi') ?>" class="btn btn-success btn-sm" title="Lihat Detail"><i class="fas fa-eye" style="color:white;"></i></a>
+                        </td>
+                      <?php } ?>
+                    </tr>
+                  <?php endforeach; ?>
+
                   <tbody>
                   </tbody>
                 </table>

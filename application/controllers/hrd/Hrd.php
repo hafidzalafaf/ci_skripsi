@@ -100,6 +100,7 @@ class Hrd extends CI_Controller
         // mengambil data dari database berdasarakan session yang sudah terbentuk
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $data['judul'] = 'Hrd Data Karyawan';
+        $data['divisi'] = $this->hrd_model->divisi_tampil()->result();
 
         $this->load->view('_partials/header');
         $this->load->view('_partials/navbar');
@@ -109,16 +110,41 @@ class Hrd extends CI_Controller
         $this->load->view('_partials/js');
     }
 
-    public function detail_karyawan()
+    public function detail_karyawan($id_divisi)
     {
         // mengambil data dari database berdasarakan session yang sudah terbentuk
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $data['judul'] = 'Hrd Data Karyawan';
+        if ($id_divisi == 1) {
+            $data['divisi'] = $this->db->get_where('tb_karyawan', ['id_divisi' => $id_divisi])->result_array();
+            // var_dump($data['divisi']);
+        } else if ($id_divisi == 2) {
+            $data['divisi'] = $this->db->get_where('tb_karyawan', ['id_divisi' => $id_divisi])->result_array();
+        } else if ($id_divisi == 3) {
+            $data['divisi'] = $this->db->get_where('tb_karyawan', ['id_divisi' => $id_divisi])->result_array();
+        } else if ($id_divisi == 4) {
+            $data['divisi'] = $this->db->get_where('tb_karyawan', ['id_divisi' => $id_divisi])->result_array();
+        } else if ($id_divisi == 5) {
+            $data['divisi'] = $this->db->get_where('tb_karyawan', ['id_divisi' => $id_divisi])->result_array();
+        } else if ($id_divisi == 6) {
+            $data['divisi'] = $this->db->get_where('tb_karyawan', ['id_divisi' => $id_divisi])->result_array();
+        } else if ($id_divisi == 7) {
+            $data['divisi'] = $this->db->get_where('tb_karyawan', ['id_divisi' => $id_divisi])->result_array();
+        } else if ($id_divisi == 8) {
+            $data['divisi'] = $this->db->get_where('tb_karyawan', ['id_divisi' => $id_divisi])->result_array();
+        } else if ($id_divisi == 9) {
+            $data['divisi'] = $this->db->get_where('tb_karyawan', ['id_divisi' => $id_divisi])->result_array();
+        } else if ($id_divisi == 10) {
+            $data['divisi'] = $this->db->get_where('tb_karyawan', ['id_divisi' => $id_divisi])->result_array();
+        } else {
+            redirect('home/Login/blocked');
+        }
+
 
         $this->load->view('_partials/header');
         $this->load->view('_partials/navbar');
         $this->load->view('_partials/sidebar_karyawan',  $data);
-        $this->load->view('hrd/detail_karyawan');
+        $this->load->view('hrd/detail_karyawan', $data);
         $this->load->view('_partials/footer');
         $this->load->view('_partials/js');
     }

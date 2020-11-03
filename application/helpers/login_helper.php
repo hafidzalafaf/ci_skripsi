@@ -13,17 +13,15 @@ function cek_login()
         $c = $ci->uri->segment(3);
         $menu = $a . '/' . $b . '/' . $c;
 
+
         // mengambil id user_sidebar berdasrkan url menu
         $queryMenu = $ci->db->get_where('user_page', ['url_page' => $menu])->row_array();
-        $menu_id = $queryMenu['id_page'];
+        $id_page = $queryMenu['id_page'];
 
-        $userAccess = $ci->db->get_where('user_access_page', [
-            'role_id' => $role_id,
-            'id_page' => $menu_id
-        ]);
-
+        $userAccess = $ci->db->get_where('user_access_page', ['role_id' => $role_id, 'id_page' => $id_page]);
         if ($userAccess->num_rows() < 1) {
-            // redirect('home/Login/blocked');
+            redirect('home/Login/blocked');
+        } else {
         }
     }
     // jika udah, cek role dia apakah boleh akses atau belum
