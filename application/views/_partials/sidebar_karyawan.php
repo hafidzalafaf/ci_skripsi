@@ -44,17 +44,17 @@
           <!-- QUERY MENU -->
 
           <?php
-          // $sidebar = $this->db->get_where('user_access_menu', ['role_id' => $role_id])->result_array();
+          // $sidebar = $this->db->get_where('user_access_sidebar', ['role_id' => $role_id])->result_array();
           $this->db->select('*');
-          $this->db->from('user_access_menu');
+          $this->db->from('user_access_sidebar');
           $this->db->where('role_id', $role_id);
           $this->db->order_by('urutan', 'asc');
           $query = $this->db->get();
           $sidebar = $query->result_array();
 
           foreach ($sidebar as $sb) :
-            $id_menu = $sb['menu_id'];
-            $menu = $this->db->get_where('user_sub_menu', ['id_menu' => $id_menu, 'is_active' => 1])->result_array();
+            $id_sidebar = $sb['sidebar_id'];
+            $menu = $this->db->get_where('user_sidebar', ['id_sidebar' => $id_sidebar, 'is_active' => 1])->result_array();
 
             foreach ($menu as $m) :
           ?>

@@ -12,19 +12,18 @@ function cek_login()
         $b = $ci->uri->segment(2);
         $c = $ci->uri->segment(3);
         $menu = $a . '/' . $b . '/' . $c;
-        echo $menu;
 
-        // mengambil id user_sub_menu berdasrkan url menu
-        $queryMenu = $ci->db->get_where('user_sub_menu', ['url' => $menu])->row_array();
-        $menu_id = $queryMenu['id_menu'];
+        // mengambil id user_sidebar berdasrkan url menu
+        $queryMenu = $ci->db->get_where('user_page', ['url_page' => $menu])->row_array();
+        $menu_id = $queryMenu['id_page'];
 
-        $userAccess = $ci->db->get_where('user_access_menu', [
+        $userAccess = $ci->db->get_where('user_access_page', [
             'role_id' => $role_id,
-            'menu_id' => $menu_id
+            'id_page' => $menu_id
         ]);
 
         if ($userAccess->num_rows() < 1) {
-            redirect('home/Login/blocked');
+            // redirect('home/Login/blocked');
         }
     }
     // jika udah, cek role dia apakah boleh akses atau belum
