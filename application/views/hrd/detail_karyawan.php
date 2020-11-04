@@ -32,6 +32,13 @@
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                 Menampilkan selurh data karyawan pada Divisi A.
               </div>
+              <?php foreach ($nama_divisi as $nd) : ?>
+                <h5>Tabel Karyawan <?php echo $nd['divisi'] ?></h5>
+                <div class="alert alert-sm alert-success alert-dismissible m-1">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                  Menampilkan selurh data karyawan <?php echo $nd['divisi'] ?>
+                </div>
+              <?php endforeach; ?>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
