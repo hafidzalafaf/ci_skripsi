@@ -27,7 +27,7 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h5>Tabel Karyawan Divisi A</h5>
+              <h5>Tabel Karyawan Divisi</h5>
               <div class="alert alert-sm alert-success alert-dismissible m-1">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                 Menampilkan selurh data karyawan pada Divisi A.
