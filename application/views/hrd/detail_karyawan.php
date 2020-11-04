@@ -27,16 +27,11 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h5>Tabel Karyawan Divisi</h5>
-              <div class="alert alert-sm alert-success alert-dismissible m-1">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                Menampilkan selurh data karyawan pada Divisi A.
-              </div>
               <?php foreach ($nama_divisi as $nd) : ?>
                 <h5>Tabel Karyawan <?php echo $nd['divisi'] ?></h5>
                 <div class="alert alert-sm alert-success alert-dismissible m-1">
                   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                  Menampilkan selurh data karyawan <?php echo $nd['divisi'] ?>
+                  Menampilkan seluruh data karyawan <?php echo $nd['divisi'] ?>
                 </div>
               <?php endforeach; ?>
             </div>
@@ -58,8 +53,8 @@
                   <thead>
                     <tr align="center">
                       <th width="50px">No</th>
-                      <th width="200px">Nama</th>
-                      <th width="130px">NIP</th>
+                      <th width="200px">NIP</th>
+                      <th width="130px">Nama</th>
                       <th width="130px">Divisi</th>
                       <th width="150px">Jabatan</th>
                       <th width="150px">Perusahaan</th>
@@ -78,11 +73,11 @@
                   foreach ($divisi as $dv) : ?>
                     <tr>
                       <td><?php echo $no++; ?></td>
-                      <td><?php echo $dv['nama']; ?></td>
                       <td><?php echo $dv['nip']; ?></td>
-                      <td>Marketing</td>
-                      <td>Staff IT</td>
-                      <td>PT.Aneka Grafindo</td>
+                      <td><?php echo $dv['nama']; ?></td>
+                      <td><?php echo $dv['id_divisi']; ?></td>
+                      <td></td>
+                      <td></td>
 
                       <?php
                       if ($this->session->userdata('role_id') != '4') { ?>
